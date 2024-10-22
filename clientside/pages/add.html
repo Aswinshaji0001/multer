@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="../css/add.css">
+</head>
+<body>
+    <header>
+        <h1>Add New User</h1>
+    </header>
+    <main>
+        <form class="add-user-form" id="form" enctype="multipart/form-data">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="image">Profile Image:</label>
+            <input type="file" id="image" name="file" accept="image/*">
+
+            <button type="submit" class="submit-button">Add User</button>
+        </form>
+    </main>
+<script src="../js/add.js"></script>
+</body>
+</html>
