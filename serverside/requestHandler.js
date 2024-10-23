@@ -20,3 +20,13 @@ export async function addUser(req,res){
         res.status(404).send(error);
     }
 }
+
+export async function getUser(req,res) {
+    try {
+        const user = await userSchema.find();
+        console.log(user);
+        return res.status(200).send(user)
+    } catch (error) {
+        return res.status(404).send(error)
+    }
+}
