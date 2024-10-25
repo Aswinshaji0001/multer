@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addUser, getUser } from "./requestHandler.js";
+import { addUser, getUser,deleteUser, getUserD } from "./requestHandler.js";
 import multer from "multer";
 import path from 'path'
 const storage=multer.diskStorage({
@@ -20,6 +20,9 @@ router.route('/image/:filename').get((req,res)=>{
   return res.sendFile(path.resolve(`./uploads/${filename}`))
   
 })
+router.route("/delete/:_id").delete(deleteUser)
+router.route("/getuserd/:id").get(getUserD)
+
 export default router;
 
 
